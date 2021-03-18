@@ -13,12 +13,11 @@ import {
     //Wizard as SetView,
 } from '../../__views/web/material/SetView';
 
-const models = 'comments';
+const models = 'users';
 
 const Item = ({ item, add, setActive }) => {
 
     const theme = useTheme();
-    //const columnsForTable = tableFields(theme);
 
     return <Form validationSchema={validationSchema} item={item} onSubmit={(newItem) => {
         add(newItem);
@@ -29,7 +28,7 @@ const Item = ({ item, add, setActive }) => {
             tabs={[
                 <FieldText
                     models={models}
-                    name={'text'}
+                    name={'username'}
                     formikProps={props}
                     onBlur={props.onBlur}
                     onChange={props.handleChange}

@@ -1,8 +1,8 @@
 import React from 'react';
 //import { useTheme } from '@material-ui/core/styles';
 import Form from '../../__components/formikEdit';
+import FieldText from '../../__components/fieldText';
 import validationSchema from './validationSchema';
-import { TextField } from '@material-ui/core';
 import {
     //Chat as SetView,
     Grid12 as SetView,
@@ -12,53 +12,34 @@ import {
     //Wizard as SetView,
 } from '../../__views/web/material/SetView';
 
+const models = 'users';
+
 const Item = ({ item, isNew, update, setActive }) => {
-
-    //const theme = useTheme();
-    //const columnsForTable = tableFields(theme);
-
+    
     return <Form validationSchema={validationSchema} item={item} onSubmit={(newItem) => {
         update(newItem);
     }}>
         {props => <SetView
             labels={['']}
             tabs={[
-                <TextField
-                    name="username"
-                    label="username"
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    value={props.values.username}
-                    error={props.errors.username && props.touched.username ? true : false}
-                    helperText={props.errors.username && props.touched.username ? props.errors.username : null}
+                <FieldText
+                    models={models}
+                    name={'username'}
+                    formikProps={props}
                     onBlur={props.handleSubmit}
                     onChange={props.handleChange}
                 />,
-                <TextField
-                    name="email"
-                    label="email"
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    value={props.values.email}
-                    error={props.errors.email && props.touched.email ? true : false}
-                    helperText={props.errors.email && props.touched.email ? props.errors.email : null}
+                <FieldText
+                    models={models}
+                    name={'email'}
+                    formikProps={props}
                     onBlur={props.handleSubmit}
                     onChange={props.handleChange}
                 />,
-                <TextField
-                    name="password"
-                    label="password"
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    value={props.values.password}
-                    error={props.errors.password && props.touched.password ? true : false}
-                    helperText={props.errors.password && props.touched.password ? props.errors.password : null}
+                <FieldText
+                    models={models}
+                    name={'password'}
+                    formikProps={props}
                     onBlur={props.handleSubmit}
                     onChange={props.handleChange}
                 />,

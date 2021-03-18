@@ -67,7 +67,7 @@ function SignInDialog(props) {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <TextField
-                                        label={theme.props.models.users.Username}
+                                        label={theme.props.models.users.username}
                                         variant="outlined"
                                         required
                                         fullWidth
@@ -89,7 +89,7 @@ function SignInDialog(props) {
                                         required
                                         fullWidth
                                         name="password"
-                                        label={theme.props.models.users.Password}
+                                        label={theme.props.models.users.password}
                                         type="password"
                                         id="password"
                                         autoComplete="current-password"
