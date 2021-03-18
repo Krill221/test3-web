@@ -29,7 +29,7 @@ export default function All() {
     const headers = [
         {
             name: "id",
-            label: theme.props.models.user.Id,
+            label: theme.props.models.users.Id,
             options: {
                 filter: false,
                 sort: false,
@@ -39,7 +39,7 @@ export default function All() {
         },
         {
             name: "username",
-            label: theme.props.models.user.Username,
+            label: theme.props.models.users.Username,
             options: {
                 filter: true,
                 sort: false,
@@ -49,7 +49,7 @@ export default function All() {
         },
         {
             name: "email",
-            label: theme.props.models.user.Email,
+            label: theme.props.models.users.Email,
             options: {
                 filter: true,
                 sort: false,

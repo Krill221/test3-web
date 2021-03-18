@@ -11,7 +11,7 @@ export default function EditView1(props) {
                 <TextField
                     id="username"
                     name="username"
-                    label={theme.props.models.user.Username}
+                    label={theme.props.models.users.Username}
                     variant="outlined"
                     margin="normal"
                     required
@@ -27,7 +27,7 @@ export default function EditView1(props) {
                 <TextField
                     id="email"
                     name="email"
-                    label={theme.props.models.user.Email}
+                    label={theme.props.models.users.Email}
                     variant="outlined"
                     margin="normal"
                     required
@@ -43,7 +43,7 @@ export default function EditView1(props) {
                 <TextField
                     id="password"
                     name="password"
-                    label={theme.props.models.user.Password}
+                    label={theme.props.models.users.Password}
                     variant="outlined"
                     margin="normal"
                     fullWidth
