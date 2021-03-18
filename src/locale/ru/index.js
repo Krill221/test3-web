@@ -50,10 +50,10 @@ const ruRU = {
     },
     models: {
       // models for generator
-			door : { ...door },
-			comment : { ...comment },
-			room : { ...room },
-			user: { ...user },
+			doors : { ...door },
+			comments : { ...comment },
+			rooms : { ...room },
+			users: { ...user },
     }
   }
 };

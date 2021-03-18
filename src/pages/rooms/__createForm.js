@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import Form from '../../__components/formikNew';
+import FieldText from '../../__components/fieldText';
 import validationSchema from './validationSchema';
 import { ListLoading, ListError } from '../../__views/web/material/helpers';
 import { CreateComponent, ItemsComponent } from '../../__components/itemsComponent';
@@ -37,7 +38,7 @@ import TableForm from '../comments/__tableForm';
 
 import qComments from '../../queries/comments.js';
 import { Typography } from '@material-ui/core';
-import { TextField, InputAdornment, IconButton } from '@material-ui/core';
+import { InputAdornment, IconButton } from '@material-ui/core';
 
 const models = 'rooms';
 
@@ -52,16 +53,10 @@ const Item = ({ item, add, setActive }) => {
         {props => <SetView
             labels={['']}
             tabs={[
-                <TextField
-                    name="name"
-                    label="name"
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    value={props.values.name}
-                    error={props.errors.name && props.touched.name ? true : false}
-                    helperText={props.errors.name && props.touched.name ? props.errors.name : null}
+                <FieldText
+                    models={models}
+                    name={'name'}
+                    formikProps={props}
                     onBlur={props.onBlur}
                     onChange={props.handleChange}
                     onKeyDown={e => {

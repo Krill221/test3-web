@@ -1,5 +1,5 @@
 const filelds = {
-    name: "name",
+    name: "Назв",
     cover: "cover",
 }
 export default filelds

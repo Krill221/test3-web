@@ -2,10 +2,10 @@ import React from 'react';
 import { Formik } from 'formik';
 
 
-export default function Form({validationSchema, item, onSubmit, children}) {
+export default function FormikNew({ validationSchema, item, onSubmit, children }) {
 
-    if('password' in item ) item = {...item, ...{password: ''}};
-    
+    if ('password' in item) item = { ...item, ...{ password: '' } };
+
     return <Formik
         initialValues={item}
         enableReinitialize={false}
@@ -17,6 +17,6 @@ export default function Form({validationSchema, item, onSubmit, children}) {
             //actions.setSubmitting(false);
         }}
     >
-        {props => children({ ...props })}
+        {props => children({ ...props }) }
     </Formik>;
 }

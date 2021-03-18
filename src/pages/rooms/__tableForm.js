@@ -2,7 +2,7 @@ const tableFields = (theme) => {
     return [
         {
             name: "id",
-            label: theme.props.models.room.Id,
+            label: theme.props.models.rooms.Id,
             options: {
                 filter: false,
                 sort: false,
@@ -12,7 +12,7 @@ const tableFields = (theme) => {
         },
         {
             name: 'name',
-            label: theme.props.models.room.text,
+            label: theme.props.models.rooms.text,
             options: {
                 filter: true,
                 sort: false,

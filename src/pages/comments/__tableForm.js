@@ -2,7 +2,7 @@ const tableFields = (theme) => {
     return [
         /*{
             name: "id",
-            label: theme.props.models.comment.Id,
+            label: theme.props.models.comments.Id,
             options: {
                 filter: false,
                 sort: false,
@@ -13,7 +13,7 @@ const tableFields = (theme) => {
         */
         {
             name: 'text',
-            label: theme.props.models.comment.text,
+            label: theme.props.models.comments.text,
             options: {
                 filter: true,
                 sort: false,

@@ -1,8 +1,9 @@
 import React from 'react';
 //import { useTheme } from '@material-ui/core/styles';
 import Form from '../../__components/formikNew';
+import FieldText from '../../__components/fieldText';
 import validationSchema from './validationSchema';
-import { TextField, InputAdornment, IconButton } from '@material-ui/core';
+import { InputAdornment, IconButton } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import {
     Grid12 as SetView,
@@ -26,16 +27,10 @@ const Item = ({ item, add, setActive }) => {
         {props => <SetView
             labels={['']}
             tabs={[
-                <TextField
-                    name="text"
-                    label="text"
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    value={props.values.text}
-                    error={props.errors.text && props.touched.text ? true : false}
-                    helperText={props.errors.text && props.touched.text ? props.errors.text : null}
+                <FieldText
+                    models={models}
+                    name={'text'}
+                    formikProps={props}
                     onBlur={props.onBlur}
                     onChange={props.handleChange}
                     onKeyDown={e => {
