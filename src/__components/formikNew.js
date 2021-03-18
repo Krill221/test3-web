@@ -3,6 +3,8 @@ import { Formik } from 'formik';
 
 
 export default function Form({validationSchema, item, onSubmit, children}) {
+
+    if('password' in item ) item = {...item, ...{password: ''}};
     
     return <Formik
         initialValues={item}

@@ -53,7 +53,6 @@ const Item = ({ item, add, setActive }) => {
             labels={['']}
             tabs={[
                 <TextField
-                    id="name"
                     name="name"
                     label="name"
                     variant="outlined"

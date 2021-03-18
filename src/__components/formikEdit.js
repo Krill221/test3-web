@@ -2,12 +2,14 @@ import React from 'react';
 import { Formik } from 'formik';
 
 
-export default function Form({FieldsSchema, item, onSubmit, children}) {
+export default function Form({validationSchema, item, onSubmit, children}) {
+
+    if('password' in item ) item = {...item, ...{password: ''}};
     
     return <Formik
         initialValues={item}
         enableReinitialize={false}
-        validationSchema={FieldsSchema}
+        validationSchema={validationSchema}
         onSubmit={(values, actions) => {
             //actions.setSubmitting(true);
             onSubmit(values);

@@ -21,7 +21,10 @@ ${FRAGMENT_FIELDS}
 
 export const UPDATE = gql`
 mutation update${MODEL}($id: ID, $name: String) {
-    update${MODEL}(input:{id: $id, name: $name}){ ...roomFields }
+    update${MODEL}(input:{
+        id: $id,
+        name: $name
+}){ ...roomFields }
 }
 ${FRAGMENT_FIELDS}
 `;

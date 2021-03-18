@@ -5,7 +5,9 @@ import Menu from './layouts/Menu';
 import Footer from './layouts/Footer';
 import PrivateMainLayout from './layouts/PrivateMainLayout';
 import PublicMainLayout from './layouts/PublicMainLayout';
-import { Users, Profile } from './pages/users';
+import Users from './pages/users';
+import Profile from './pages/users/profile';
+
 //top for generator
 import Comments from './pages/comments';
 import Rooms from './pages/rooms';

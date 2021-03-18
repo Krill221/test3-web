@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 import ViewSet from '../../components/views/viewSet';
 import CreateMany from '../../components/hasMany/createMany';
 ////g-key import queries
-import { GETS, UPDATE, DELETE } from '../../queries/users.js';
+import { GETS_WHERE, UPDATE, DELETE } from '../../queries/users.js';
 ////g-key import helpers
 import Edit from './edit';
 import Create from './create';
@@ -68,7 +68,7 @@ export default function All() {
                     name={models}
                     viewType='supertable' // can be grid list table supertable raw
                     superTableOptions={superTableOptions}
-                    query_where={GETS}
+                    query_where={GETS_WHERE}
                     query_variables={{ ids: [] }}
                     query_update={UPDATE}
                     query_delete={DELETE}
