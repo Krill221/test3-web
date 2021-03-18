@@ -14,7 +14,7 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useContext } from 'react';
 import { AuthContext } from '../auth';
-import { AuthArea } from '../components/authArea';
+import { AuthArea } from '../__components/authArea';
 import Webcam from "react-webcam";
 import { Button, Paper } from '@material-ui/core';
 import PersonIcon from '@material-ui/icons/Person';
