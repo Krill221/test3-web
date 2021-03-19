@@ -1,6 +1,6 @@
 import user from './user';
 //top for generator
-import door from './door';
+import like from './like';
 import comment from './comment';
 import room from './room';
 
@@ -15,6 +15,7 @@ const ruRU = {
       Main: "Главная",
       Users: "Users",
       Rooms: "Rooms",
+      Like: "Like",
       Comments: "Coms",
       Profile: "Профиль",
       SignIn: "Войти",
@@ -50,7 +51,7 @@ const ruRU = {
     },
     models: {
       // models for generator
-			doors : { ...door },
+			likes : { ...like },
 			comments : { ...comment },
 			rooms : { ...room },
 			users: { ...user },

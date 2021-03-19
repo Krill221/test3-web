@@ -9,6 +9,7 @@ import Users from './pages/users';
 import Profile from './pages/users/profile';
 
 //top for generator
+import Likes from './pages/likes';
 import Comments from './pages/comments';
 import Rooms from './pages/rooms';
 
@@ -25,6 +26,7 @@ function App() {
           <PrivateMainLayout path="/users" component={Users} />
           <PublicMainLayout exact path="/profile" component={Profile} />
           {/*list for generator*/}
+          <PublicMainLayout path="/likes" component={Likes} />
           <PublicMainLayout path="/comments" component={Comments} />
           <PublicMainLayout path="/rooms" component={Rooms} />
           {/*single for generator*/}

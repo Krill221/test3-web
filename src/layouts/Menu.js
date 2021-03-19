@@ -40,6 +40,7 @@ const Layout = ({ history }) => {
                         <Button color={(value === '/users' ? 'primary' : 'inherit')} component={Link} to='/users' startIcon={<PeopleIcon />}>{theme.props.menu.Users}</Button>
                         <Button color={(value === '/rooms' ? 'primary' : 'inherit')} component={Link} to='/rooms' startIcon={<PeopleIcon />}>{theme.props.menu.Rooms}</Button>
                         <Button color={(value === '/comments' ? 'primary' : 'inherit')} component={Link} to='/comments' startIcon={<PeopleIcon />}>{theme.props.menu.Comments}</Button>
+                        <Button color={(value === '/likes' ? 'primary' : 'inherit')} component={Link} to='/likes' startIcon={<PeopleIcon />}>{theme.props.menu.Likes}</Button>
                         <Typography style={{ flexGrow: 1 }} variant="h5" noWrap />
                         <Button color={(value === '/profile' ? 'primary' : 'inherit')} component={Link} value='/profile' to='/profile' startIcon={<AccountCircleIcon />} >{user ? theme.props.menu.Profile : theme.props.menu.SignIn}</Button>
                     </Toolbar>
@@ -54,6 +55,7 @@ const Layout = ({ history }) => {
                     <BottomNavigationAction component={Link} value='/users' to='/users' label={theme.props.menu.Users} icon={<PeopleIcon />} />
                     <BottomNavigationAction component={Link} value='/rooms' to='/rooms' label={theme.props.menu.Rooms} icon={<PeopleIcon />} />
                     <BottomNavigationAction component={Link} value='/comments' to='/comments' label={theme.props.menu.Comments} icon={<PeopleIcon />} />
+                    <BottomNavigationAction component={Link} value='/likes' to='/likes' label={theme.props.menu.Likes} icon={<PeopleIcon />} />
                     <BottomNavigationAction component={Link} value='/profile' to='/profile' label={user ? theme.props.menu.Profile : theme.props.menu.SignIn} icon={<AccountCircleIcon />} />
                 </BottomNavigation>
             }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from '../../__components/formikEdit';
+import { Typography } from '@material-ui/core';
 import validationSchema from './validationSchema';
 import { useTheme } from '@material-ui/core/styles';
 import { ListLoading, ListError } from '../../__views/web/material/helpers';
@@ -34,9 +35,14 @@ import InlineForm from '../comments/__inlineForm';
 import DeleteForm from '../comments/__deleteForm';
 import TableForm from '../comments/__tableForm';
 
+import CreateFormL from '../likes/__createForm';
+import EditFormL from '../likes/__editForm';
+import InlineFormL from '../likes/__inlineForm';
+import DeleteFormL from '../likes/__deleteForm';
+import TableFormL from '../likes/__tableForm';
 
 import qComments from '../../queries/comments.js';
-import { Typography } from '@material-ui/core';
+import qLikes from '../../queries/likes.js';
 
 const Item = ({ item, isNew, update, setActive }) => {
 
@@ -49,6 +55,32 @@ const Item = ({ item, isNew, update, setActive }) => {
             labels={['']}
             tabs={[
                 <Typography>{item.name}</Typography>,
+                <Typography>Likes</Typography>,
+                <CreateComponent
+                    label={theme.props.components.Add}
+                    query={qLikes}
+                    parentObject={{ room: item.id }}
+                    CreateView={CreateView}
+                    CreateForm={CreateFormL}
+                />,
+                <ItemsComponent
+                    query={qLikes}
+                    parentObject={{ room: item.id }}
+                    Loading={ListLoading}
+                    Error={ListError}
+                    ItemsView={ItemsView}
+                    ItemView={ItemView}
+                    TableForm={TableFormL(theme)}
+                    EditForm={EditFormL}
+                    InlineForm={InlineFormL}
+                    DeleteForm={DeleteFormL}
+                    options={{
+                        inline: false,
+                        editable: false,
+                        deletable: true
+                    }}
+                />,
+                <Typography>Comments</Typography>,
                 <ItemsComponent
                     query={qComments}
                     parentObject={{ room: item.id }}
