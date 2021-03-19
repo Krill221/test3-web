@@ -43,6 +43,10 @@ import TableFormL from '../likes/__tableForm';
 
 import qComments from '../../queries/comments.js';
 import qLikes from '../../queries/likes.js';
+import FieldText from '../../__components/fieldText';
+
+const models = 'rooms';
+
 
 const Item = ({ item, isNew, update, setActive }) => {
 
@@ -55,6 +59,13 @@ const Item = ({ item, isNew, update, setActive }) => {
             labels={['']}
             tabs={[
                 <Typography>{item.name}</Typography>,
+                <FieldText
+                    models={models}
+                    name={'name'}
+                    formikProps={props}
+                    onBlur={props.handleSubmit}
+                    onChange={props.handleChange}
+                />,
                 <Typography>Likes</Typography>,
                 <CreateComponent
                     label={theme.props.components.Add}

@@ -8,7 +8,7 @@ const Form = ({ item, isNew, update, del }) => {
     return <Fragment>
         {
             //item.text
-            <ListItemText primary={item.text} />
+            <ListItemText primary={item.text} secondary={item.room} />
         }
     </Fragment>
 };

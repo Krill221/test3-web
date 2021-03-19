@@ -11,7 +11,7 @@ const Form = ({ item, isNew, update, del }) => {
     return <Fragment>
         {
             //item.text
-            <ListItemText primary={item.value} />
+            <ListItemText primary={item.value} secondary={`${item.id} userId: ${item.userId}`} />
         }
     </Fragment>
 };
